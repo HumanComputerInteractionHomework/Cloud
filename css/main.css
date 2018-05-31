@@ -600,7 +600,7 @@ ul.resp-tabs-list {
 	padding:5em 0;
 }
 .footer-grid h3{
-	color: #1569b4;
+	color: #6C7B8B;
 	font:bold 22px/30px 'Slabo 27px', serif;
 	margin: 0 0 0.9em 0;
 }
@@ -619,7 +619,7 @@ ul.resp-tabs-list {
 	text-decoration:none;
 }
 .footer-grid ul li a:hover{
-	color:#1569b4;
+	color:#6495ED;
 }
 
 .footer-address {
@@ -661,7 +661,7 @@ ul.resp-tabs-list {
 }
 
 .NewsTicker {
-    background: #1b6bb1;
+    background: #7D9EC0;
     color: #ffffff;
     padding-top:10px;
     padding-bottom: 10px;
@@ -690,10 +690,10 @@ ul.resp-tabs-list {
     font-size: 16px;
     padding:10px 40px;
     width: auto;
-    border-radius:18px;
-    background: #1b6bb1;
+    /*border-radius:18px;*/
+    /*background: #1b6bb1;*/
     color: #fff;
-    border:2px solid #fff;
+    /*border:2px solid #fff;*/
     font-family: 微软雅黑;
     font-weight:500;
     float: right;
@@ -704,11 +704,11 @@ ul.resp-tabs-list {
     font-size: 16px;
     padding:10px 40px;
     width: auto;
-    border-radius:40px;
-    background: #fff;
+    /*border-radius:40px;*/
+    /*background: #fff;*/
     color: #1b6bb1;
     font-family: 微软雅黑;
-    border:2px solid #1b6bb1;
+    /*border:2px solid #1b6bb1;*/
     font-weight:500;
     margin-top: 10px;
     margin-left: 44%;
@@ -719,11 +719,11 @@ ul.resp-tabs-list {
     font-size: 16px;
     padding:10px 35px;
     width: auto;
-    border-radius:18px;
-    background: #fff;
-    color: #1b6bb1;
+    /*border-radius:18px;*/
+    /*background: #fff;*/
+    color: #7D9EC0;
     font-family: 微软雅黑;
-    border:2px solid #1b6bb1;
+    /*border:2px solid #1b6bb1;*/
     font-weight:500;
     margin-top: 10px;
     margin-left: 30%;
@@ -793,17 +793,19 @@ ul.service_box li.service_box-left{
     -webkit-border-radius:100px;
     -moz-border-radius:100px;
     -o-border-radius:100px;
-    background:#0072bc;
+    color: #4682B4;
+    /*background:#0072bc;*/
     text-align:center;
     margin-right:1.5em;
 }
 
 ul.service_box li.service_box-left span.num{
     font-size: 32px;
-    color: #fff;
+    color: #4682B4;
 }
 ul.service_box li.service_box-right{
     overflow:hidden;
+    font-family: 微软雅黑;
 }
 ul.service_box li.service_box-right h3{
     margin:0;
@@ -813,7 +815,7 @@ ul.service_box li.service_box-right h3{
 ul.service_box li.service_box-right h3 a{
     margin:0;
     text-transform:uppercase;
-    color:#000;
+    color: #7D9EC0;
 }
 ul.service_box li.service_box-right h3 a:hover{
     text-decoration:none;
