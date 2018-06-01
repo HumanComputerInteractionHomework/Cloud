@@ -49,6 +49,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
     <link href="./css/multiple-select.css" rel="stylesheet"/>
     <!----font-Awesome----->
+
+
+    <!-- hp增加 -->
+    <link href="css/bootstrap.min_flat.css" rel='stylesheet' type='text/css' />
+    <script src="js/flat-ui.js" ></script>
+    <script src="js/application.js" ></script>
+    <link href="css/docs.css" rel='stylesheet' type='text/css'/>
+    <link href="css/flat-ui.css" rel='stylesheet' type='text/css'>
+
 </head>
 <body>
     <!-- header -->
@@ -253,10 +262,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <input class="form-control input-lg search_label" id="school" style="border-radius:15px;padding-left: 20px;color: #808080" type="text"  onFocus=" if(this.value=='职位名称') this.value=''" onBlur="if(this.value=='') this.value='职位名称'" value="职位名称">
                     </div>
 
+
+
+                    <!-- flat 月薪 -->
+                    <div id = "flat_salary">
+                        <select data-toggle="select" class="form-control select select-default mrs mbm">
+                            <option value="0">My Profile here is</option>
+                            <option value="1">My Friends</option>
+                            <option value="2">My Profile</option>
+                            <option value="3">My Friends</option>
+                        </select>
+                    </div>
+
                     <!--月薪范围-->
                     <div class="form-group search_item">
-                        <select  class="form-control input-lg  search_label" id="salary"  style="border-radius: 15px;color: #808080" required onchange="incomeSelected(this)">
-                            <option value="0">月薪范围</option>
+                        <select  class="form-control input-lg  search_label" id="salary"  style="border-radius: 25px;color: #808080" required onchange="incomeSelected(this)">
+                            <option value="0" style="border-radius: 20px;">月薪范围</option>
                             <option value="<5k"><5k</option>
                             <option value="5k-10k">5k-10k</option>
                             <option value="10k-15k">10k-15k</option>
