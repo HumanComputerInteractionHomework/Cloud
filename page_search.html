@@ -16,6 +16,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         }
     </script>
 
+    <style type="text/css">
+        .search_label{
+            border-radius:30px;
+        }
+
+        .search_item{
+            width: 150px;
+            float: left;
+            margin-left:20px;
+        }
+
+    </style>
+
+
+
+
+
     <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -228,14 +245,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             -->
 
             <!--新增加的div -->
-            <div id ="search_area" style="position:relative;top:-85px;margin:0 auto;width: 500px;height: 500px;">
-                <h3 class="form-title text-center" style="margin-bottom: 20px;color: #808080">搜索条件</h3>
-                <form class="form-header" role="form" style="padding-left: 10px" >
-                    <div class="form-group">
-                        <input class="form-control input-lg" id="school" style="padding-left: 20px;color: #808080" type="text"  onFocus=" if(this.value=='职位名称') this.value=''" onBlur="if(this.value=='') this.value='职位名称'" value="职位名称">
+            <div id ="search_area" style="position:relative;top:-35px;margin:0 auto;height: 500px;">
+                <!--<h3 class="form-title text-center" style="margin-bottom: 20px;color: #808080">搜索条件</h3>-->
+                <form class="form-header" role="form"  >
+                    <!--职位名称-->
+                    <div class="form-group search_item" style = "margin-left: 0px;">
+                        <input class="form-control input-lg search_label" id="school" style="border-radius:15px;padding-left: 20px;color: #808080" type="text"  onFocus=" if(this.value=='职位名称') this.value=''" onBlur="if(this.value=='') this.value='职位名称'" value="职位名称">
                     </div>
-                    <div class="form-group">
-                        <select  class="form-control input-lg" id="salary"  style="border-radius: 2px;color: #808080" required onchange="incomeSelected(this)">
+
+                    <!--月薪范围-->
+                    <div class="form-group search_item">
+                        <select  class="form-control input-lg  search_label" id="salary"  style="border-radius: 15px;color: #808080" required onchange="incomeSelected(this)">
                             <option value="0">月薪范围</option>
                             <option value="<5k"><5k</option>
                             <option value="5k-10k">5k-10k</option>
@@ -247,9 +267,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </select>
                     </div>
 
-                    <div class="form-group">
-                        <label class="infoinput" id="label_city"style="display: block;margin-top: 190px;margin-left:20px;left:0px;color: #808080;font-family: 宋体" >工作城市</label>
-                        <select multiple="multiple" style="color: black;width: 490px; padding-right: 0px;padding-left: 0px;color: #808080 "
+
+                    <!--工作城市-->
+                    <div class="form-group search_item" >
+                        <label class="infoinput" id="label_city"style="width: 140px;display: block;margin-top: 190px;margin-left:20px;left:0px;color: #808080;font-family: 宋体" >工作城市</label>
+                        <select multiple="multiple" style="width: 140px;color: black; padding-right: 0px;padding-left: 0px;color: #808080 "
                                 class="multiple-groupSelect form-control input-lg " id="expect-city" required="required">
                             <optgroup label="热门城市">
                                 <option value="北京">北京</option>
@@ -304,7 +326,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </select>
                     </div>
 
-                    <div class="form-group">
+
+                    <!--公司性质-->
+                    <div class="form-group search_item" style="margin-left:10px">
                         <select  class="form-control input-lg career-quality" style="border-radius: 2px;color: #808080">
                             <option value="0">公司性质</option>
                             <option value="私企">私企</option>
@@ -314,9 +338,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <option value="初创公司">初创公司</option>
                         </select>
                     </div>
-                    <div class="form-group" >
-                        <div class="form-group row">
-                            <div class="col-md-6" style="padding-right: 5px">
+
+                    <!--学历要求-->
+                    <div class="form-group search_item" >
                                 <select  class="form-control input-lg" id="educationDegree"  style="border-radius: 2px;color: #808080" >
                                     <option value="0">学历要求</option>
                                     <option value="male">高中及以下</option>
@@ -325,8 +349,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <option value="female">硕士(含在读)</option>
                                     <option value="female">博士(含在读)</option>
                                 </select>
-                            </div>
-                            <div class="col-md-6" style="padding-left: 5px">
+                    </div>
+
+                    <!--职业年限-->
+                    <div class="form-group search_item" >
                                 <select  class="form-control input-lg" id="workYear"  style="border-radius: 2px;color: #808080" >
                                     <option value="-1">职业年限</option>
                                     <option value="male">应届及以上</option>
@@ -338,13 +364,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <option value="female">9-10年</option>
                                     <option value="female">10年以上</option>
                                 </select>
-                            </div>
-                        </div>
                     </div>
-                    <div class="form-group last">
-                        <p style="color: #808080" class="text-center">以上均为选填项</p>
+
+                    <!-- 搜索-->
+                    <div class="form-group last search_item" style="width: 100px;">
+                        <!--<p style="color: #808080" class="text-center">以上均为选填项</p>-->
                         <input type="submit" class="btn btn-warning btn-block btn-lg" value="搜索" onclick="">
                     </div>
+
+
+
                 </form>
             </div>
 
