@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fdf265a2-47d9-4f4f-919b-8b95883a357c" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/dislike.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/star.png" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/page_search.html" afterPath="$PROJECT_DIR$/page_search.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,7 +21,7 @@
       <file leaf-file-name="page_search.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/page_search.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
+            <state relative-caret-position="-502">
               <caret line="401" column="32" lean-forward="false" selection-start-line="401" selection-start-column="32" selection-end-line="401" selection-end-column="32" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -61,7 +62,6 @@
                 <element signature="n#style#0;n#span#1;n#p#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="e#22645#22651#0" expanded="true" />
-                <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -83,6 +83,41 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="dislike.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/images/dislike.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login_ico.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/images/login_ico.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="star.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/images/star.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/images/user.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="telephone.ico" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/images/telephone.ico">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
@@ -93,41 +128,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test6.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test6.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="39" column="22" lean-forward="false" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test7.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test7.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="45" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="18" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="jquery3.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/jquery3.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
               <caret line="1" column="115" lean-forward="false" selection-start-line="1" selection-start-column="115" selection-end-line="1" selection-end-column="115" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="page_signin.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/page_signin.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1500">
-              <caret line="100" column="141" lean-forward="false" selection-start-line="100" selection-start-column="122" selection-end-line="100" selection-end-column="141" />
               <folding />
             </state>
           </provider>
@@ -374,7 +379,7 @@
       <workItem from="1527762936695" duration="4727000" />
       <workItem from="1527813055027" duration="8893000" />
       <workItem from="1527849139959" duration="11786000" />
-      <workItem from="1527900678729" duration="4356000" />
+      <workItem from="1527900678729" duration="4459000" />
     </task>
     <task id="LOCAL-00001" summary="search页面">
       <created>1527783188086</created>
@@ -397,11 +402,18 @@
       <option name="project" value="LOCAL" />
       <updated>1527835926660</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="search页面">
+      <created>1527913928791</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1527913928791</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="429016000" />
+    <option name="totallyTimeSpent" value="429119000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="51" y="23" width="1156" height="773" extended-state="0" />
@@ -465,9 +477,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="修改search页面，把'条件搜索'直接放在页面可见处" />
-    <MESSAGE value="search页面" />
     <MESSAGE value="search页面search_area" />
-    <option name="LAST_COMMIT_MESSAGE" value="search页面search_area" />
+    <MESSAGE value="search页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="search页面" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -493,10 +505,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://D:/scatter-map.html" />
-    <entry file="file://D:/bar1.html" />
-    <entry file="file://D:/map-polygon.html" />
-    <entry file="file://D:/scatter-aqi-color.html" />
     <entry file="file://D:/bubble-gradient.html" />
     <entry file="file://D:/scatter-map-brush.html" />
     <entry file="file://D:/custom-bar-trend.html" />
@@ -890,14 +898,34 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/images/login_ico.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/images/star.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/user.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/telephone.ico">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/dislike.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/page_search.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
+        <state relative-caret-position="-502">
           <caret line="401" column="32" lean-forward="false" selection-start-line="401" selection-start-column="32" selection-end-line="401" selection-end-column="32" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -938,7 +966,6 @@
             <element signature="n#style#0;n#span#1;n#p#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="e#22645#22651#0" expanded="true" />
-            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
