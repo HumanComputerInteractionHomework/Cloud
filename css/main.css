@@ -1104,8 +1104,11 @@ ul.service_box li.service_box-right p{
     color: #808080;
     font-size: 18px;
     font-family: "微软雅黑 Light";
-    text-align: center;
+    /*text-align: center;*/
     display: inline-block;
+}
+.result_content_item0 .t12,.t13{
+    text-align: center;
 }
 
 .result_content_item1 {
@@ -1121,8 +1124,11 @@ ul.service_box li.service_box-right p{
     color: #808080;
     font-size: 18px;
     font-family: "微软雅黑 Light";
-    text-align: center;
+    /*text-align: center;*/
     display: inline-block;
+}
+.result_content_item1 .t12,.t13{
+    text-align: center;
 }
 
 .like {
@@ -1279,7 +1285,8 @@ ul.service_box li.service_box-right p{
 .detail_companyImage_block1 h4{
     color: #4682B4;
     font-family: "微软雅黑 Light";
-    margin-left: 10px;
+    padding-left: 15px;
+    /*margin-left: 10px;*/
 }
 .detail_companyImage_block2 h4{
     color: #4682B4;
