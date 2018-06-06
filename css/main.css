@@ -333,6 +333,20 @@ body a{
     color: white;
     border-radius: 100px;
 }
+.btn-switch{
+    font-size: 17px;
+    line-height: 20px;
+    padding: 0px 20px;
+    border: 2px solid #4682B4;
+    background: #4682B4;
+    transition: all 0.4s;
+    color: white;
+    border-radius: 100px;
+    float: right;
+    margin-top: 0px;
+    margin-right: 100px;
+}
+
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
     border: 2px solid #3eb0f7;
     background: transparent;
@@ -1155,6 +1169,7 @@ ul.service_box li.service_box-right p{
 .detail_base_block {
     margin-top: 10px;
     padding-left: 15px;
+    /*text-align: center;*/
 }
 
 
@@ -1164,6 +1179,16 @@ ul.service_box li.service_box-right p{
 }
 
 .detail_info_title_show {
+    font-family: "微软雅黑 Light";
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    padding: 0px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+
+    border-image: initial;
     background: #4682B4  ;
     color: white;
     font-family:"微软雅黑 Light";
@@ -1181,6 +1206,17 @@ ul.service_box li.service_box-right p{
 
 
 .detail_info_title_hide {
+    font-family: "微软雅黑 Light";
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    padding: 0px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+
+
     background:  white ;
     font-family:"微软雅黑 Light";
     color: #4682B4;
@@ -1285,7 +1321,7 @@ ul.service_box li.service_box-right p{
 .rating-1 .star-1,
 .rating-1-half .star-1 {
     border-color: #fff;
-    color: #4169E1
+    color: #4682B4
 }
 
 .rating-1-half .star-2 {
@@ -1295,13 +1331,13 @@ ul.service_box li.service_box-right p{
 .rating-2 .star-1,
 .rating-2-half .star-1 {
     border-color: #fff;
-    color: #6495ED;
+    color: #4682B4
 }
 
 .rating-2 .star-2,
 .rating-2-half .star-2 {
     border-color: #fff;
-    color: #6495ED;
+    color: #4682B4
 }
 
 .rating-2-half .star-3 {
@@ -1311,19 +1347,19 @@ ul.service_box li.service_box-right p{
 .rating-3 .star-1,
 .rating-3-half .star-1 {
     border-color: #fff;
-    color: #1E90FF;
+    color: #4682B4
 }
 
 .rating-3 .star-2,
 .rating-3-half .star-2 {
     border-color: #fff;
-    color: #1E90FF;
+    color: #4682B4
 }
 
 .rating-3 .star-3,
 .rating-3-half .star-3 {
     border-color: #fff;
-    color: #1E90FF;
+    color: #4682B4
 }
 
 .rating-3-half .star-4 {
@@ -1333,25 +1369,25 @@ ul.service_box li.service_box-right p{
 .rating-4 .star-1,
 .rating-4-half .star-1 {
     border-color: #fff;
-    color: #00BFFF;
+    color: #4682B4
 }
 
 .rating-4 .star-2,
 .rating-4-half .star-2 {
     border-color: #fff;
-    color: #00BFFF;
+    color: #4682B4
 }
 
 .rating-4 .star-3,
 .rating-4-half .star-3 {
     border-color: #fff;
-    color: #00BFFF;
+    color: #4682B4
 }
 
 .rating-4 .star-4,
 .rating-4-half .star-4 {
     border-color: #fff;
-    color: #00BFFF;
+    color: #4682B4
 }
 
 .rating-4-half .star-5 {
@@ -1361,31 +1397,31 @@ ul.service_box li.service_box-right p{
 .rating-5 .star-1,
 .rating-5-half .star-1 {
     border-color: #fff;
-    color: #00FFFF;
+    color: #4682B4
 }
 
 .rating-5 .star-2,
 .rating-5-half .star-2 {
     border-color: #fff;
-    color: #00FFFF;
+    color: #4682B4
 }
 
 .rating-5 .star-3,
 .rating-5-half .star-3 {
     border-color: #fff;
-    color: #00FFFF;
+    color: #4682B4
 }
 
 .rating-5 .star-4,
 .rating-5-half .star-4 {
     border-color: #fff;
-    color: #00FFFF;
+    color: #4682B4
 }
 
 .rating-5 .star-5,
 .rating-5-half .star-5 {
     border-color: #fff;
-    color: #00FFFF;
+    color: #4682B4
 }
 
 .rating-5-half .star-6 {
