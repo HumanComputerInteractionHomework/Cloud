@@ -1053,8 +1053,8 @@ ul.service_box li.service_box-right p{
 }
 
 .t2 {
-    width:200px;
-
+    width:80px;
+    left: -100px;
 }
 .t3 {
     width:150px;
