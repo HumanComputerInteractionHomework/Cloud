@@ -92,16 +92,30 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <option value="4">薪酬</option>
                 </select>
             </div>
-            <div class="col-md-6" style="margin-top: 20px">
-                <a class="search2-btn" style="color: #1f96e0;" data-toggle="modal" href="#search">全匹配搜索</a>
-                <a class="search2-btn" style="color: #1f96e0;margin-right: 20px" data-toggle="modal" href="#fuzzySearch">模糊搜索</a>
-            </div>
+
+
+            <div class="col-md-6" style="top: 10px;">
+                <div class="input-group" style = >
+                    <input id="jobName" type="text" class="form-control" style="height:40px;width: 250px;"placeholder="职位名称">
+                    <span class="input-group-btn" style="top:-30px;left:-211px;">
+						<button class="btn btn-default" onclick="fuzzySearchRequest(1)"  type="button" style="width:85px;height: 40px;line-height: 10px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;">
+                            <p style="text-align: center;margin-left: -30px;">模糊搜索</p>
+						</button>
+					</span>
+                </div><!-- /input-group -->
+
+                <div style="position: relative;left:-110px;">
+                    <a class="search2-btn" style="color: #1f96e0;font-size:18px;margin-top:-70px;" data-toggle="modal" href="#search">全匹配搜索</a>
+                </div>
+            </div><!-- /.col-lg-6 -->
+
+
         </div>
         <div class="result_content" id="heatContent">
             <div  class="row">
 
-                <div class="col-md-4 heatList" id="heatList">
-                    <h3 style="color: #4682B4; font-family: '微软雅黑 Light';margin-left: 20px;margin-top: 10px;text-align: center">热门公司排行:</h3>
+                <div class="col-md-6 heatList" id="heatList">
+                    <h3 style="color: #4682B4; font-family: '微软雅黑 Light';margin-left: 20px;margin-top: 10px;text-align: center">热门公司排行</h3>
                     <div class="heat-title">
                         <span class="t51">公司名称</span>
                         <span class="t52">浏览次数</span>
@@ -110,9 +124,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <div id="baseline2"></div>
                     </div>
                 </div>
-                <div class="col-md-8 heatImage" id="heatImage">
+                <!--<div class="col-md-8 heatImage" id="heatImage">-->
 
-                </div>
+                <!--</div>-->
             </div>
         </div>
         <div id="baseline"></div>
@@ -326,7 +340,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <form class="form-header" role="form" style="padding-left: 10px" >
                         <p style="color: #808080;margin-bottom: 20px" class="text-center" >请输入职位关键词进行模糊搜索。</p>
                         <div class="form-group">
-                            <input class="form-control input-lg" id="jobName" style="padding-left: 20px;color: #808080" type="text"  onFocus=" if(this.value=='职位名称') this.value=''" onBlur="if(this.value=='') this.value='职位名称'" value="职位名称">
+                            <input class="form-control input-lg" id="jobName1" style="padding-left: 20px;color: #808080" type="text"  onFocus=" if(this.value=='职位名称') this.value=''" onBlur="if(this.value=='') this.value='职位名称'" value="职位名称">
                         </div>
                         <div>
                             <input type="button" class="btn btn-warning btn-block btn-lg" value="搜索"  data-dismiss="modal" onclick="fuzzySearchRequest(1)">
