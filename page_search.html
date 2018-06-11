@@ -37,6 +37,42 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
     <link href="./css/multiple-select.css" rel="stylesheet"/>
     <!----font-Awesome----->
+
+
+    <style>
+        .label_hp{
+            color: #000000;
+            font-family: '微软雅黑';
+            font-weight: 300;
+            font-size: 20px;
+        }
+
+        .select_style{
+            margin-top:-35px;
+            margin-left:160px;
+            width:180px;
+            height: 50px;
+            border-radius: 2px;
+            color: #808080
+        }
+
+        .label_style{
+            position: relative;
+            margin-left: 35px;
+            top: 10px;
+        }
+
+        .row_style{
+            position: relative;
+            top:25px;
+        }
+
+    </style>
+
+
+
+
+
 </head>
 <body>
 <!-- header -->
@@ -78,72 +114,380 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
     </div>
 </div>
+
+
 <div style="background: #f6f6f6">
     <div class="container">
         <div class="row search_title">
-            <div class="col-md-6">
+            <div class="col-md-3">
                 <span id="career_search" class="search_title_main" style="margin-right: 50px;color: #4682B4">职位搜索</span>
-                <span style="color: #808080" >排序</span>
-                <select class="sort-select" id="sortId">
-                    <option value="0">匹配度</option>
-                    <option value="1">公司名</option>
-                    <option value="2">职位</option>
-                    <option value="3">地点</option>
-                    <option value="4">薪酬</option>
-                </select>
+                <!--<span style="color: #808080" >排序</span>-->
+                <!--<select class="sort-select" id="sortId">-->
+                    <!--<option value="0">匹配度</option>-->
+                    <!--<option value="1">公司名</option>-->
+                    <!--<option value="2">职位</option>-->
+                    <!--<option value="3">地点</option>-->
+                    <!--<option value="4">薪酬</option>-->
+                <!--</select>-->
             </div>
 
 
-            <div class="col-md-6" style="top: 10px;">
-                <div class="input-group" style = >
-                    <input id="jobName" type="text" class="form-control" style="height:40px;width: 250px;"placeholder="职位名称">
-                    <span class="input-group-btn" style="top:-30px;left:-211px;">
+            <!-- 模糊搜索 -->
+            <div class="col-md-6" style="top: 10px;left:-100px;">
+                <div class="input-group">
+                    <input id="jobName" type="text" class="form-control" style="height:40px;width: 451px;"placeholder="职位名称">
+                    <span class="input-group-btn" style="top:-30px;left:-10px;">
 						<button class="btn btn-default" onclick="fuzzySearchRequest(1)"  type="button" style="width:85px;height: 40px;line-height: 10px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;">
                             <p style="text-align: center;margin-left: -30px;">模糊搜索</p>
 						</button>
 					</span>
                 </div><!-- /input-group -->
+            </div>   <!-- 模糊搜索结束 -->
 
-                <div style="position: relative;left:-110px;">
-                    <a class="search2-btn" style="color: #1f96e0;font-size:18px;margin-top:-70px;" data-toggle="modal" href="#search">全匹配搜索</a>
+        </div>  <!-- 职位搜索title行结束 -->
+
+
+        <!-- 全匹配搜索选项 -->
+        <div class="signup-header wow fadeInUp" style="position: relative;margin-bottom: 10px; padding-bottom: 10px; top: -100px;width: 1130px;">
+
+            <h3 class="form-title text-center" style="position: relative;left: -480px;">全匹配搜索</h3>
+
+            <form class="form-header" role="form" style="padding-left: 10px;margin-top: -30px;" >
+
+                <!-- 月薪 -->
+                <div class="form-group row_style" >
+
+                    <label class="label_hp label_style" >月薪范围</label>
+                    <select  class="form-control input-lg select_style" id="salary" style = "height: 50px; font-family: '微软雅黑 Light';font-weight:300;font-size: 20px;color: grey" required onchange="incomeSelected(this)">
+                        <option value="5000"><5k</option>
+                        <option value="10000">5k-10k</option>
+                        <option value="15000">10k-15k</option>
+                        <option value="20000">15k-20k</option>
+                        <option value="30000">20k-30k</option>
+                        <option value="50000">30k-50k</option>
+                        <option value="100000">>50k</option>
+                    </select>
+
                 </div>
-            </div><!-- /.col-lg-6 -->
 
 
-        </div>
-        <div class="result_content" id="heatContent">
-            <div  class="row">
+                <!-- 公司性质 -->
+                <div class="form-group  row_style" style="margin-top: -65px;left: 360px;">
+                    <label class="label_hp label_style">公司性质</label>
+                    <select  class="form-control input-lg career-quality select_style" style = "height: 50px; font-family: '微软雅黑 Light';font-weight:300;font-size: 20px;color: grey" id="jobQuality">
+                        <option value="国企">国企</option>
+                        <option value="合资">合资</option>
+                        <option value="外资（欧美）">外资（欧美）</option>
+                        <option value="外资（非欧美）">外资（非欧美）</option>
+                        <option value="事业单位">事业单位</option>
+                        <option value="上市公司">上市公司</option>
+                        <option value="民营公司">民营公司</option>
+                        <option value="创业公司">创业公司</option>
+                    </select>
+                </div>
 
-                <div class="col-md-6 heatList" id="heatList">
-                    <h3 style="color: #4682B4; font-family: '微软雅黑 Light';margin-left: 20px;margin-top: 10px;text-align: center">热门公司排行</h3>
-                    <div class="heat-title">
-                        <span class="t51">公司名称</span>
-                        <span class="t52">浏览次数</span>
-                    </div>
-                    <div class="heat-content">
-                        <div id="baseline2"></div>
+
+                <!-- 学历要求 -->
+                <div class="form-group row_style" style="margin-top: -63px;left:720px;" >
+                    <label class="label_hp label_style">学历要求</label>
+                    <select  class="form-control input-lg select_style" style = "height: 50px; font-family: '微软雅黑 Light';font-weight:300;font-size: 20px;color: grey" id="eduRequire" >
+                        <option value="高中">高中及以下</option>
+                        <option value="大专">大专(含在读)</option>
+                        <option value="本科">本科(含在读)</option>
+                        <option value="硕士">硕士(含在读)</option>
+                        <option value="博士">博士(含在读)</option>
+                    </select>
+                </div>
+
+                <!-- 职业年限 -->
+                <div class="form-group row_style" style="margin-top: 20px;left: 0px;">
+                    <label class="label_hp label_style">职业年限</label>
+                    <select  class="form-control input-lg select_style" style = "height: 50px; font-family: '微软雅黑 Light';font-weight:300;font-size: 20px;color: grey" id="workYear">
+                        <option value="无工作经验">应届及以上</option>
+                        <option value="1年经验">1年经验</option>
+                        <option value="2年经验">2年经验</option>
+                        <option value="3-4年经验">3-4年</option>
+                        <option value="5-7年经验">5-7年</option>
+                        <option value="10年以上经验">10年以上</option>
+                    </select>
+                </div>
+
+
+                <!-- 城市 -->
+                <div class="form-group row_style" style="margin-top: -45px;left:360px;">
+                    <label class="label_hp label_style" id="label_city" style="top:-8px;">工作城市</label>
+
+                    <div style="margin-left: 160px;margin-top:-50px;height: 50px;" class="col-mg-4">
+                        <select class="form-control multiple-groupSelect" multiple="multiple" style="width: 565px;"
+                                id="jobCity"  >
+                            <optgroup label="热门城市">
+                                <option value="北京">北京</option>
+                                <option value="上海">上海</option>
+                                <option value="广州">广州</option>
+                                <option value="深圳">深圳</option>
+                                <option value="杭州">杭州</option>
+                                <option value="天津">天津</option>
+                                <option value="南京">南京</option>
+                                <option value="武汉">武汉</option>
+                                <option value="成都">成都</option>
+                                <option value="西安">西安</option>
+                                <option value="大连">大连</option>
+                                <option value="苏州">苏州</option>
+                                <option value="合肥">合肥</option>
+                                <option value="厦门">厦门</option>
+                                <option value="长沙">长沙</option>
+                                <option value="重庆">重庆</option>
+                            </optgroup>
+                            <optgroup label="江苏省">
+                                <option value="无锡">无锡</option>
+                                <option value="徐州">徐州</option>
+                                <option value="常州">常州</option>
+                                <option value="南通">南通</option>
+                                <option value="江苏省其他">其他</option>
+                            </optgroup>
+                            <optgroup label="浙江省">
+                                <option value="宁波">宁波</option>
+                                <option value="温州">温州</option>
+                                <option value="嘉兴">嘉兴</option>
+                                <option value="绍兴">绍兴</option>
+                                <option value="浙江省其他">其他</option>
+                            </optgroup>
+                            <optgroup label="广东省">
+                                <option value="珠海">珠海</option>
+                                <option value="东莞">东莞</option>
+                                <option value="佛山">佛山</option>
+                                <option value="中山">中山</option>
+                                <option value="广东省其他">其他</option>
+                            </optgroup>
+                            <optgroup label="山东省">
+                                <option value="济南">济南</option>
+                                <option value="青岛">青岛</option>
+                                <option value="威海">威海</option>
+                                <option value="烟台">烟台</option>
+                                <option value="潍坊">潍坊</option>
+                                <option value="山东省其他">其他</option>
+                            </optgroup>
+                            <optgroup label="其他">
+                                <option value="">其他</option>
+                            </optgroup>
+                        </select>
                     </div>
                 </div>
-                <!--<div class="col-md-8 heatImage" id="heatImage">-->
 
-                <!--</div>-->
-            </div>
+
+                <div class="form-group last">
+                    <p style="color: #808080;position: relative;top: 40px;left:-270px;" class="text-center">以上均为选填项</p>
+                    <!--<button type="button" class="btn btn6-warning btn-block btn-lg" style="width: 60px;height:50px;border-radius: 5px;margin-left: 500px;text-align: center;" data-dismiss="modal" onclick="allMatchSearch(1)" ><p style="margin-left: -30px;">搜索</p></button>-->
+
+                    <div class="input-group">
+                       <span class="input-group-btn" style="top:0px;left:520px;">
+						<button class="btn btn-default" onclick="allMatchSearch(1)"  type="button" style="width:85px;height: 40px;line-height: 10px;border-radius: 5px; background-color: #59b2f6">
+                            <p style="text-align: center;margin-left: -10px;">搜索</p>
+						</button>
+					    </span>
+                    </div><!-- /input-group -->
+
+                </div>
+
+            </form>
+
+
         </div>
-        <div id="baseline"></div>
-        <div id="pageGro" class="cb" style="width: 400px;">
-            <div class="pageUp">上一页</div>
-            <div class="pageList" >
-                <ul style="list-style:none;float: left;margin:0;padding:0;">
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                </ul>
+
+
+
+
+        <!-- 结果 -->
+        <div style="position: relative;top:-50px;width:800px;">
+            <div class="result_title">
+                <span class="t1" style="width: 100px;">公司名称</span>
+                <span class="t2" style="width: 180px;">职位</span>
+                <span class="t3" style="width: 100px;">地点</span>
+                <span class="t4" style="width: 140px;">薪酬</span>
+                <span class="t5" style="width: 80px;">匹配度</span>
+                <span class="t6" style="width: 60px;">收藏</span>
+                <span class="t7" style="width: 60px;">不喜欢</span>
             </div>
-            <div class="pageDown">下一页</div>
-            <div style="padding-top: 2px"><span id="pageId" class="pageButtonInfo" style="margin-top: 0px;list-style:none">第1页/共5页</span></div>
+            <div class="result_content">
+                <div class="result_content_item0">
+                    <span class="t1" style="width: 110px;">京东集团总部</span>
+                    <span class="t2" style="width: 170px;">大数据工程师</span>
+                    <span class="t3" style="width: 110px;">北京-朝阳区</span>
+                    <span class="t4" style="width: 150px;">20000-40000</span>
+                    <span class="t5" style="width: 60px;">95%</span>
+                    <button type="button" class="like t6"style="width: 50px;" ><i class="glyphicon glyphicon-heart"></i></button>
+                    <!--<button type="button" class="like t6">-->
+                    <!--<div class="heart-red">-->
+                    <!--</div>-->
+                    <!--</button>-->
+                    <button type="button" class="dislike t7"><i class="fa fa-frown-o fa-lg"></i></button>
+                </div>
+                <div class="result_content_item1">
+                    <span class="t1" style="width: 110px;">京东集团总部</span>
+                    <span class="t2" style="width: 170px;">大数据工程师</span>
+                    <span class="t3" style="width: 110px;">北京-朝阳区</span>
+                    <span class="t4" style="width: 150px;">20000-40000</span>
+                    <span class="t5" style="width: 60px;">95%</span>
+                    <button type="button" class="like t6"style="width: 50px;" ><i class="glyphicon glyphicon-heart"></i></button>
+
+                    <button type="button" class="dislike t7"><i class="fa fa-frown-o fa-lg"></i></button>
+                </div>
+                <div class="result_content_item0">
+                    <span class="t1" style="width: 110px;">京东集团总部</span>
+                    <span class="t2" style="width: 170px;">大数据工程师</span>
+                    <span class="t3" style="width: 110px;">北京-朝阳区</span>
+                    <span class="t4" style="width: 150px;">20000-40000</span>
+                    <span class="t5" style="width: 60px;">95%</span>
+                    <button type="button" class="like t6"style="width: 50px;" ><i class="glyphicon glyphicon-heart"></i></button>
+
+                    <button type="button" class="dislike t7"><i class="fa fa-frown-o fa-lg"></i></button>
+                </div>
+                <div class="result_content_item1">
+                    <span class="t1" style="width: 110px;">京东集团总部</span>
+                    <span class="t2" style="width: 170px;">大数据工程师</span>
+                    <span class="t3" style="width: 110px;">北京-朝阳区</span>
+                    <span class="t4" style="width: 150px;">20000-40000</span>
+                    <span class="t5" style="width: 60px;">95%</span>
+                    <button type="button" class="like t6"style="width: 50px;" ><i class="glyphicon glyphicon-heart"></i></button>
+
+                    <button type="button" class="dislike t7"><i class="fa fa-frown-o fa-lg"></i></button>
+                </div>
+                <div class="result_content_item0">
+                    <span class="t1" style="width: 110px;">京东集团总部</span>
+                    <span class="t2" style="width: 170px;">大数据工程师</span>
+                    <span class="t3" style="width: 110px;">北京-朝阳区</span>
+                    <span class="t4" style="width: 150px;">20000-40000</span>
+                    <span class="t5" style="width: 60px;">95%</span>
+                    <button type="button" class="like t6"style="width: 50px;" ><i class="glyphicon glyphicon-heart"></i></button>
+
+                    <button type="button" class="dislike t7"><i class="fa fa-frown-o fa-lg"></i></button>
+                </div>
+                <div class="result_content_item1">
+                    <span class="t1" style="width: 110px;">京东集团总部</span>
+                    <span class="t2" style="width: 170px;">大数据工程师</span>
+                    <span class="t3" style="width: 110px;">北京-朝阳区</span>
+                    <span class="t4" style="width: 150px;">20000-40000</span>
+                    <span class="t5" style="width: 60px;">95%</span>
+                    <button type="button" class="like t6"style="width: 50px;" ><i class="glyphicon glyphicon-heart"></i></button>
+
+                    <button type="button" class="dislike t7"><i class="fa fa-frown-o fa-lg"></i></button>
+                </div>
+                <div class="result_content_item0">
+                    <span class="t1" style="width: 110px;">京东集团总部</span>
+                    <span class="t2" style="width: 170px;">大数据工程师</span>
+                    <span class="t3" style="width: 110px;">北京-朝阳区</span>
+                    <span class="t4" style="width: 150px;">20000-40000</span>
+                    <span class="t5" style="width: 60px;">95%</span>
+                    <button type="button" class="like t6"style="width: 50px;" ><i class="glyphicon glyphicon-heart"></i></button>
+
+                    <button type="button" class="dislike t7"><i class="fa fa-frown-o fa-lg"></i></button>
+                </div>
+                <div class="result_content_item1">
+                    <span class="t1" style="width: 110px;">京东集团总部</span>
+                    <span class="t2" style="width: 170px;">大数据工程师</span>
+                    <span class="t3" style="width: 110px;">北京-朝阳区</span>
+                    <span class="t4" style="width: 150px;">20000-40000</span>
+                    <span class="t5" style="width: 60px;">95%</span>
+                    <button type="button" class="like t6"style="width: 50px;" ><i class="glyphicon glyphicon-heart"></i></button>
+
+                    <button type="button" class="dislike t7"><i class="fa fa-frown-o fa-lg"></i></button>
+                </div>
+                <div class="result_content_item0">
+                    <span class="t1" style="width: 110px;">京东集团总部</span>
+                    <span class="t2" style="width: 170px;">大数据工程师</span>
+                    <span class="t3" style="width: 110px;">北京-朝阳区</span>
+                    <span class="t4" style="width: 150px;">20000-40000</span>
+                    <span class="t5" style="width: 60px;">95%</span>
+                    <button type="button" class="like t6"style="width: 50px;" ><i class="glyphicon glyphicon-heart"></i></button>
+
+                    <button type="button" class="dislike t7"><i class="fa fa-frown-o fa-lg"></i></button>
+                </div>
+                <div class="result_content_item1">
+                    <span class="t1" style="width: 110px;">京东集团总部</span>
+                    <span class="t2" style="width: 170px;">大数据工程师</span>
+                    <span class="t3" style="width: 110px;">北京-朝阳区</span>
+                    <span class="t4" style="width: 150px;">20000-40000</span>
+                    <span class="t5" style="width: 60px;">95%</span>
+                    <button type="button" class="like t6"style="width: 50px;" ><i class="glyphicon glyphicon-heart"></i></button>
+
+                    <button type="button" class="dislike t7"><i class="fa fa-frown-o fa-lg"></i></button>
+                </div>
+                <div class="result_content_item0">
+                    <span class="t1" style="width: 110px;">京东集团总部</span>
+                    <span class="t2" style="width: 170px;">大数据工程师</span>
+                    <span class="t3" style="width: 110px;">北京-朝阳区</span>
+                    <span class="t4" style="width: 150px;">20000-40000</span>
+                    <span class="t5" style="width: 60px;">95%</span>
+                    <button type="button" class="like t6"style="width: 50px;" ><i class="glyphicon glyphicon-heart"></i></button>
+
+                    <button type="button" class="dislike t7"><i class="fa fa-frown-o fa-lg"></i></button>
+                </div>
+                <div class="result_content_item1">
+                    <span class="t1" style="width: 110px;">京东集团总部</span>
+                    <span class="t2" style="width: 170px;">大数据工程师</span>
+                    <span class="t3" style="width: 110px;">北京-朝阳区</span>
+                    <span class="t4" style="width: 150px;">20000-40000</span>
+                    <span class="t5" style="width: 60px;">95%</span>
+                    <button type="button" class="like t6"style="width: 50px;" ><i class="glyphicon glyphicon-heart"></i></button>
+
+                    <button type="button" class="dislike t7"><i class="fa fa-frown-o fa-lg"></i></button>
+                </div>
+            </div>
+
+            <p class="text-center" style="margin-top: 5px;margin-bottom: 50px">
+                <button class="page-btn disabled" type="button" style="background: none;border:none;" disabled="disabled" onclick="lastPage()">上一页</button>
+                <button class="page-btn page-btn-active" type="button" style="background: none;border:none;" disabled="disabled" onclick="toPage(1)">1</button>
+                <button class="page-btn " type="button" style="background: none;border:none;"  onclick="toPage(2)">2</button>
+                <button class="page-btn " type="button" style="background: none;border:none;"  onclick="toPage(2)">3</button>
+                <button class="page-btn " type="button" style="background: none;border:none;"  onclick="toPage(2)">4</button>
+                <button class="page-btn" type="button" style="background: none;border:none;"  onclick="nextPage()">下一页</button>
+                <span id="search_currentPage" style="color: #808080">第1页 </span>
+                <span id="search_sumPage" style="color: #808080">共4页</span>
+            </p>
         </div>
+        <!-- 结果结束 -->
+
+
+        <!-- 热门搜索 -->
+        <div style="position: absolute;left:900px;top:560px;width: 200px;">
+            <div class="result_content" id="heatContent" style="width: 400px;background-color: transparent">
+                <div  class="row">
+
+                    <div class="col-md-6 heatList" id="heatList">
+                        <h3 style="color: #4682B4; font-family: '微软雅黑 Light';margin-left: 20px;margin-top: 10px;text-align: center">热门公司排行</h3>
+                        <div class="heat-title" style="width: 300px;">
+                            <span class="t51">公司名称</span>
+                            <span class="t52">浏览次数</span>
+                        </div>
+                        <div class="heat-content" style="width: 300px;">
+                            <div id="baseline2"></div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!-- 暂时先不显示footer -->
+            <!--<div id="baseline" style="width: 300px;"></div>-->
+            <!--<div id="pageGro" class="cb" style="width: 300px;">-->
+            <!--<div class="pageUp">上一页</div>-->
+            <!--<div class="pageList" >-->
+            <!--<ul style="list-style:none;float: left;margin:0;padding:0;">-->
+            <!--<li>1</li>-->
+            <!--<li>2</li>-->
+            <!--<li>3</li>-->
+            <!--<li>4</li>-->
+            <!--<li>5</li>-->
+            <!--</ul>-->
+            <!--</div>-->
+            <!--<div class="pageDown">下一页</div>-->
+            <!--<div style="padding-top: 2px"><span id="pageId" class="pageButtonInfo" style="margin-top: 0px;list-style:none">第1页/共5页</span></div>-->
+            <!--</div>-->
+
+        </div>
+        <!-- 热门搜索结束-->
+
     </div>
 </div>
 <!-- footer -->
@@ -204,132 +548,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <!-- footer-grids -->
     </div>
 </div>
-<div>
-    <div class="modal fade" id="search" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="margin-left: 34%">
-        <div class="modal-dialog" style="display: inline-block;width: 435px">
-            <div class="row " id="pjpage1" style="display: block;padding-right: 0px;padding-left: 0px">
-                <!-- /.signup form -->
-                <div class="signup-header wow fadeInUp " style="margin-bottom: 10px; padding-bottom: 10px;background: #fff">
-                    <h3 class="form-title text-center" style="margin-bottom: 20px">全匹配搜索</h3>
-                    <form class="form-header" role="form" style="padding-left: 10px" >
-                        <div class="form-group">
-                            <select  class="form-control input-lg" id="salary"  style="border-radius: 2px;color: #808080" required onchange="incomeSelected(this)">
-                                <option value="0">月薪范围</option>
-                                <option value="5000"><5k</option>
-                                <option value="10000">5k-10k</option>
-                                <option value="15000">10k-15k</option>
-                                <option value="20000">15k-20k</option>
-                                <option value="30000">20k-30k</option>
-                                <option value="50000">30k-50k</option>
-                                <option value="100000">>50k</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label class="infoinput" id="label_city"style="display: block;margin-top: 253px;margin-left:5px;left:30px;color: #808080;font-family: 宋体" >工作城市</label>
-                            <select multiple="multiple" style="color: black;width: 417px; padding-right: 0px;padding-left: 0px;color: #808080 "
-                                    class="multiple-groupSelect form-control input-lg " id="jobCity"  >
-                                <optgroup label="热门城市">
-                                    <option value="北京">北京</option>
-                                    <option value="上海">上海</option>
-                                    <option value="广州">广州</option>
-                                    <option value="深圳">深圳</option>
-                                    <option value="杭州">杭州</option>
-                                    <option value="天津">天津</option>
-                                    <option value="南京">南京</option>
-                                    <option value="武汉">武汉</option>
-                                    <option value="成都">成都</option>
-                                    <option value="西安">西安</option>
-                                    <option value="大连">大连</option>
-                                    <option value="苏州">苏州</option>
-                                    <option value="合肥">合肥</option>
-                                    <option value="厦门">厦门</option>
-                                    <option value="长沙">长沙</option>
-                                    <option value="重庆">重庆</option>
-                                </optgroup>
-                                <optgroup label="江苏省">
-                                    <option value="无锡">无锡</option>
-                                    <option value="徐州">徐州</option>
-                                    <option value="常州">常州</option>
-                                    <option value="南通">南通</option>
-                                    <option value="江苏省其他">其他</option>
-                                </optgroup>
-                                <optgroup label="浙江省">
-                                    <option value="宁波">宁波</option>
-                                    <option value="温州">温州</option>
-                                    <option value="嘉兴">嘉兴</option>
-                                    <option value="绍兴">绍兴</option>
-                                    <option value="浙江省其他">其他</option>
-                                </optgroup>
-                                <optgroup label="广东省">
-                                    <option value="珠海">珠海</option>
-                                    <option value="东莞">东莞</option>
-                                    <option value="佛山">佛山</option>
-                                    <option value="中山">中山</option>
-                                    <option value="广东省其他">其他</option>
-                                </optgroup>
-                                <optgroup label="山东省">
-                                    <option value="济南">济南</option>
-                                    <option value="青岛">青岛</option>
-                                    <option value="威海">威海</option>
-                                    <option value="烟台">烟台</option>
-                                    <option value="潍坊">潍坊</option>
-                                    <option value="山东省其他">其他</option>
-                                </optgroup>
-                                <optgroup label="其他">
-                                    <option value="">其他</option>
-                                </optgroup>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <select  class="form-control input-lg career-quality" style="border-radius: 2px;color: #808080" id="jobQuality">
-                                <option value="0">公司性质</option>
-                                <option value="国企">国企</option>
-                                <option value="合资">合资</option>
-                                <option value="外资（欧美）">外资（欧美）</option>
-                                <option value="外资（非欧美）">外资（非欧美）</option>
-                                <option value="事业单位">事业单位</option>
-                                <option value="上市公司">上市公司</option>
-                                <option value="民营公司">民营公司</option>
-                                <option value="创业公司">创业公司</option>
-                            </select>
-                        </div>
-                        <div class="form-group" >
-                            <div class="form-group row">
-                                <div class="col-md-6" style="padding-right: 5px">
-                                    <select  class="form-control input-lg" id="eduRequire"  style="border-radius: 2px;color: #808080" >
-                                        <option value="0">学历要求</option>
-                                        <option value="高中">高中及以下</option>
-                                        <option value="大专">大专(含在读)</option>
-                                        <option value="本科">本科(含在读)</option>
-                                        <option value="硕士">硕士(含在读)</option>
-                                        <option value="博士">博士(含在读)</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-6" style="padding-left: 5px">
-                                    <select  class="form-control input-lg" id="workYear"  style="border-radius: 2px;color: #808080" >
-                                        <option value="-1">职业年限</option>
-                                        <option value="无工作经验">应届及以上</option>
-                                        <option value="1年经验">1年经验</option>
-                                        <option value="2年经验">2年经验</option>
-                                        <option value="3-4年经验">3-4年</option>
-                                        <option value="5-7年经验">5-7年</option>
-                                        <option value="10年以上经验">10年以上</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group last">
-                            <p style="color: #808080" class="text-center">以上均为选填项</p>
-                            <input type="button" class="btn btn-warning btn-block btn-lg" value="搜索" data-dismiss="modal" onclick="allMatchSearch(1)">
-                        </div>
-                    </form>
-                </div>
 
-
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal -->
-    </div>
-</div>
 <div>
     <div class="modal fade" id="fuzzySearch" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="margin-left: 34%">
         <div class="modal-dialog" style="display: inline-block;width: 435px">
@@ -362,10 +581,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         {"word":'塔塔信息技术（中国）',"weight":41},
         {"word":'百丽集团体育事业总部',"weight":47},
         {"word":'北京中科信软科技有限公司',"weight":41},
-        {"word":'湖南大唐科技有限公司',"weight":38},
-        {"word":'伺动营销科技有限公司',"weight":38},
-        {"word":'北京鼎兴达信息公司',"weight":24},
-        {"word":'上海瀛太信息公司',"weight":23}]
+         {"word":'湖南大唐科技有限公司',"weight":38},
+         {"word":'伺动营销科技有限公司',"weight":38},
+         {"word":'北京鼎兴达信息公司',"weight":24},
+         {"word":'上海瀛太信息公司',"weight":23}]
     for (var i = 0; i < data1.length; i++) {
         if (i==0) {
             var addElement = '<div class="result_content_item2" style="margin-top: 0px">\n' +
@@ -385,8 +604,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 '                        </div>';
         }
 
-        $("#baseline2").before(addElement);
+         $("#baseline2").before(addElement);
     }
+
     showHeatInfo(data1)
 </script>
 
